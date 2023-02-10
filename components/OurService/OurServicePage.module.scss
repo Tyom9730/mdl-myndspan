@@ -1,0 +1,12 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins.scss";
+
+.our-servic-container {
+  position: relative;
+  > div {
+    &:nth-child(1) {
+      z-index: 2;
+      position: relative;
+    }
+  }
+}

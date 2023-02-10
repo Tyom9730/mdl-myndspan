@@ -1,0 +1,34 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.cookies-wrap {
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.cookies {
+  bottom: 20px;
+  background: $black;
+  max-width: 410px;
+  margin: 0 auto;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px 8px 20px;
+  border-radius: 44px;
+  .cookies-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-right: 10px;
+    > a {
+      color: #ffffff;
+    }
+  }
+}

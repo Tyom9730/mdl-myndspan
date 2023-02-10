@@ -1,0 +1,33 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.safe-hands {
+  padding: 100px 40px;
+  margin-left: 170px;
+  .content {
+    display: grid;
+    justify-items: center;
+    .desc {
+      max-width: 820px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 140%;
+      text-align: center;
+      margin-top: 24px;
+      @include sm {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+      }
+    }
+  }
+  @include lg {
+    margin-left: 100px;
+  }
+
+  @include md {
+    margin-left: 0;
+    padding: 80px 20px 100px;
+  }
+}

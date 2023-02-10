@@ -1,0 +1,65 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.people-behind {
+  position: relative;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+    margin: 0 auto;
+    @include md {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 120%;
+      max-width: unset;
+      margin: unset;
+      text-align: left;
+    }
+  }
+  .peoples {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin: 80px auto;
+    max-width: 760px;
+    > div {
+      max-width: 217px;
+      margin: 0 16px;
+      .name {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+        margin: 15px 0 8px;
+      }
+      .work {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          opacity: 0.6;
+        }
+      }
+      svg {
+        path,
+        rect,
+        circle {
+          fill: $white;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

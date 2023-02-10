@@ -1,0 +1,87 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.socials {
+  padding: 0 40px 100px;
+  .socials-header {
+    margin-left: 170px;
+    display: grid;
+    // grid-template-columns: 100px 1fr;
+    grid-gap: 32px;
+    align-items: flex-start;
+    .content {
+      padding-top: 100px;
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          width: 63px;
+          height: 63px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // &:first-of-type {
+          //   background: #3bc4ca;
+          // }
+          &:last-of-type {
+            background: #4d5458;
+            margin-left: 18px;
+          }
+        }
+      }
+      .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin: 56px 0;
+        > span {
+          color: #3bc4ca;
+        }
+
+        @include sm {
+          font-size: 42px;
+          line-height: 120%;
+        }
+      }
+    }
+
+    @include lg {
+      margin-left: 100px;
+    }
+
+    @include md {
+      margin-left: 0;
+    }
+  }
+  .slider {
+    margin-left: -40px;
+    margin-right: -40px;
+    overflow: hidden;
+    .items {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-left: -40px;
+      margin-right: -40px;
+      overflow-x: auto;
+      .item {
+        margin-right: 44px;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .visit-btn {
+      > div {
+        display: flex;
+        justify-content: center;
+        margin-top: 56px;
+      }
+    }
+  }
+}

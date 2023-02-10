@@ -1,0 +1,126 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.headquarters {
+  background: linear-gradient(356.27deg, #e7e8ea -13.4%, #ffffff 80.62%);
+  padding: 80px 40px 80px;
+  color: $black;
+  padding-left: 170px;
+  a {
+    color: $black;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76px;
+    line-height: 120%;
+    text-align: right;
+    letter-spacing: -0.02em;
+    margin-bottom: 60px;
+    @include md {
+      margin-bottom: 32px;
+    }
+    @include sm {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 120%;
+      text-align: left;
+    }
+  }
+  .content {
+    background: #f1f1f2;
+    border-radius: 20px;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 173px 1fr;
+    grid-gap: 94px;
+    .details {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      position: relative;
+      .info {
+        .name {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 140%;
+        }
+        .adress {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          padding: 40px 0 24px;
+          max-width: 173px;
+          @include md {
+            padding: 16px 0;
+          }
+        }
+        .see-map-btn {
+          padding-bottom: 24px;
+          button {
+            border-color: rgba(0, 11, 16, 0.4);
+            color: $black;
+            text-transform: none;
+          }
+          @include md {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+        .mail {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          max-width: 173px;
+        }
+      }
+      .socials {
+        max-width: 173px;
+        margin-top: 16px;
+        a {
+          display: flex;
+          align-items: center;
+        }
+        span {
+          margin-left: 11px;
+        }
+        svg {
+          path {
+            fill: $black;
+          }
+        }
+      }
+      @include md {
+        margin-top: 24px;
+      }
+    }
+    .city-img {
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @include lg {
+      grid-gap: 48px;
+      padding: 80px 40px;
+    }
+    @include md {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 20px 16px;
+      grid-gap: unset;
+    }
+  }
+  @include lg {
+    padding-left: 100px;
+  }
+
+  @include md {
+    padding-left: 20px;
+    padding: 70px 20px 70px;
+  }
+}

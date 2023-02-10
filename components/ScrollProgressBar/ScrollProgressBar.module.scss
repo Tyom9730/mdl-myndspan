@@ -1,0 +1,53 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins.scss";
+
+.progress-bar {
+  position: fixed;
+  top: 50%;
+  left: 64px;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  display: grid;
+  .tabs {
+    padding: 4px 0 4px 18px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    .active {
+      font-weight: 500;
+      opacity: 1;
+    }
+    .active-last {
+      opacity: 0.8;
+    }
+    .active-last:last-child {
+      font-weight: 500;
+      opacity: 1;
+    }
+
+    > h3 {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 140%;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+    &.lineLeft {
+      border-left: 2px solid #fff;
+    }
+    &.lineLeft-last {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    &.dark {
+      border-color: #d6d9d9;
+      > h3 {
+        color: $black;
+      }
+      &.lineLeft {
+        border-left: 2px solid $black;
+      }
+    }
+  }
+  @include md {
+    display: none;
+  }
+}

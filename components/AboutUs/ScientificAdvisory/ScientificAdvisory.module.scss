@@ -1,0 +1,142 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.scientific-advisory {
+  padding: 80px 0;
+  margin-left: 170px;
+  position: relative;
+  > img {
+    position: absolute;
+    top: -446px;
+    left: -79px;
+    pointer-events: none;
+    z-index: -1;
+    @include xl {
+      width: 100%;
+    }
+    @include md {
+      top: -1175px;
+    }
+  }
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 76px;
+    line-height: 120%;
+    text-align: right;
+    letter-spacing: -0.02em;
+    max-width: 545px;
+    margin-left: auto;
+    margin-bottom: 64px;
+    @include md {
+      font-weight: 500;
+      font-size: 42px;
+      line-height: 120%;
+      max-width: unset;
+      margin-left: unset;
+      text-align: left;
+    }
+  }
+  .members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: flex-start;
+    .members-imgs {
+      @include md {
+        overflow: hidden;
+      }
+    }
+    .arrows {
+      display: flex;
+      margin-top: 32px;
+      > button {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        &.prev-btn {
+          margin-right: 18px;
+          > svg {
+            transform: rotate(180deg);
+          }
+        }
+        &:disabled {
+          background: rgba(255, 255, 255, 0.1);
+          cursor: not-allowed;
+          > svg {
+            > path {
+              fill: #a3a7a9;
+              stroke: #a3a7a9;
+            }
+          }
+        }
+      }
+      @include md {
+        display: none;
+      }
+    }
+    .members-info {
+      max-width: 500px;
+      margin-top: 64px;
+      .name {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 35px;
+        letter-spacing: 0em;
+        @include sm {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 140%;
+        }
+      }
+      .profession {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        color: #808587;
+        margin-bottom: 32px;
+        @include sm {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      .desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        opacity: 0.9;
+        margin-bottom: 32px;
+      }
+      .read-more {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        opacity: 0.9;
+        margin-bottom: 32px;
+      }
+      @include md {
+        margin-top: 32px;
+      }
+    }
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include lg {
+    margin-left: 100px;
+  }
+
+  @include md {
+    margin-left: 0;
+    padding: 80px 0 0;
+    // overflow: hidden;
+  }
+}

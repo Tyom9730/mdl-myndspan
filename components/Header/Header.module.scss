@@ -1,0 +1,197 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins.scss";
+
+.website-header {
+  position: absolute;
+  width: 100%;
+  padding: 32px 40px;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .website-logo {
+      display: flex;
+      align-items: center;
+      img {
+        @include sm {
+          width: 91px;
+          height: 29px;
+        }
+      }
+      > img {
+        width: 42px;
+        height: 42px;
+        margin-left: 24px;
+        @include md {
+          width: 32px;
+          height: 32px;
+          margin-left: 16px;
+        }
+      }
+    }
+    .header-navigation {
+      display: flex;
+      align-items: center;
+      .header-menu {
+        display: flex;
+        align-items: center;
+        > h3 {
+          margin-right: 24px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+
+          @include sm {
+            display: none;
+          }
+        }
+      }
+      .header-btn {
+        margin-left: 88px;
+
+        @include sm {
+          margin-left: unset;
+          margin-right: 16px;
+        }
+      }
+
+      @include sm {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  @include sm {
+    padding: 16px 20px;
+  }
+}
+
+// .websiteHeader {
+//   padding: 0 20px;
+//   .header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 28px 0;
+//     position: relative;
+//     z-index: 3;
+//     .website-logo {
+//       @include sm {
+//         width: 104px;
+//       }
+//     }
+//     .navbar {
+//       display: flex;
+//       align-items: center;
+//       .nav {
+//         display: flex;
+//         list-style: none;
+//         align-items: center;
+//         margin-right: 60px;
+//         > li {
+//           &:not(:last-child) {
+//             margin-right: 40px;
+//           }
+//           > a,
+//           > div {
+//             display: flex;
+//             align-items: center;
+//             font-style: normal;
+//             font-weight: 700;
+//             font-size: 14px;
+//             line-height: 22px;
+//             color: $black;
+//             cursor: pointer;
+//             > svg {
+//               margin-left: 13px;
+//             }
+//           }
+//         }
+//         @include md {
+//           display: none;
+//         }
+//       }
+//       .navbarActions {
+//         display: flex;
+//         > button {
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           padding: 12px;
+
+//           &:nth-child(1) {
+//             padding: 10px 24px;
+//             @include sm {
+//               padding: 6px 16px;
+//             }
+//           }
+//           &:nth-child(2) {
+//             display: none;
+//             margin-left: 20px;
+//             @include md {
+//               display: flex;
+//             }
+//             @include sm {
+//               margin-left: 12px;
+//               // padding: 6px 16px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @include md {
+//     padding: 0 60px;
+//   }
+//   @include sm {
+//     padding: 0 20px;
+//   }
+// }
+// .dropdownMenu {
+//   outline: none;
+//   background: $white;
+//   box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1),
+//     0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+//   border-radius: 12px;
+//   padding: 20px 16px;
+//   display: grid;
+//   grid-gap: 8px;
+//   margin-top: 8px;
+//   .dropdownItem {
+//     display: grid;
+//     grid-template-columns: 50px 1fr;
+//     grid-gap: 16px;
+//     padding: 12px;
+//     .dropdownItemDetails {
+//       > h3 {
+//         font-style: normal;
+//         font-weight: 700;
+//         font-size: 16px;
+//         line-height: 24px;
+//       }
+//       > p {
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 14px;
+//         line-height: 22px;
+//         color: #67707b;
+//         margin-top: 4px;
+//       }
+//     }
+//     .dropdownItemLogo {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       background: #f8f9fc;
+//       border-radius: 12px;
+//     }
+//     &:hover {
+//       background: #f8f9fc;
+//       cursor: pointer;
+//     }
+//   }
+// }

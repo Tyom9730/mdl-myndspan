@@ -1,0 +1,52 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+.partners {
+  padding: 100px 40px;
+  margin-left: 170px;
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 76px;
+      line-height: 120%;
+      letter-spacing: -0.02em;
+      @include sm {
+        font-size: 42px;
+        line-height: 120%;
+      }
+    }
+    .details {
+      max-width: 500px;
+      .desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        opacity: 0.9;
+        margin-bottom: 24px;
+      }
+    }
+    @include md {
+      grid-template-columns: 1fr;
+    }
+  }
+  .sliders {
+    margin-left: -210px;
+    margin-right: -40px;
+    margin-top: 117px;
+    overflow: hidden;
+    @include md {
+      margin-right: -20px;
+    }
+  }
+  @include lg {
+    margin-left: 100px;
+  }
+
+  @include md {
+    margin-left: 0;
+    padding: 80px 20px;
+  }
+}

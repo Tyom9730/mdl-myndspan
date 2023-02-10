@@ -1,0 +1,109 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.nav {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  .left-section {
+    top: -1000px;
+    opacity: 0;
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    background-color: #1a114f;
+    transition: all 0.5s ease;
+    visibility: hidden;
+  }
+  .right-section {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    background-color: #261975;
+    right: 0;
+    top: 1000px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+
+  .left-section-hide {
+    width: 20%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background-color: #1a114f;
+    top: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+    left: 0;
+    display: flex;
+    align-items: center;
+    .face {
+      @include md {
+        height: 287px;
+    width: 120px;
+      }
+    }
+    @include md {
+      width: 27%;
+    }
+    
+  }
+
+  .right-section-hide {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background-color: #261975;
+    top: 0;
+    transition: all 0.5s ease;
+    right: 0;
+    display: flex;
+    .security-variables {
+      height: 100vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 70px;
+      > li {
+        list-style-type: none;
+        > a {
+          text-decoration: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 31px;
+          line-height: 130%;
+          letter-spacing: -0.01em;
+          color: $white;
+          @include md {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+          }
+        }
+      }
+      @include md {
+        height: unset;
+        width: 100%;
+        align-items: flex-end;
+        padding-right: 16px;
+        padding-bottom: 48px;
+      }
+    }
+    @include md {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 73%;
+    }
+  }
+}

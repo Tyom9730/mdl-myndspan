@@ -1,0 +1,24 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.faqs {
+  padding: 80px 40px 155px;
+  margin-left: 170px;
+  .title {
+    font-weight: 500;
+    font-size: 76px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    max-width: 866px;
+    // margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  @include lg {
+    margin-left: 100px;
+  }
+
+  @include md {
+    margin-left: 0;
+    padding: 70px 20px 70px;
+  }
+}

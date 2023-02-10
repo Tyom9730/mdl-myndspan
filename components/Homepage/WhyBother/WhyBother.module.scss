@@ -1,0 +1,95 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.why-bother {
+  padding: 166px 40px 100px;
+  .why-bother-body {
+    margin-left: 170px;
+    display: grid;
+    grid-gap: 32px;
+    align-items: center;
+    position: relative;
+    .content {
+      .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 76px;
+        line-height: 120%;
+        text-align: right;
+        letter-spacing: -0.02em;
+        margin-bottom: 80px;
+        > span {
+          color: #6ed7dc;
+        }
+        @include sm {
+          font-weight: 500;
+          font-size: 42px;
+          line-height: 120%;
+        }
+      }
+      .subtitle-1 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        max-width: 637px;
+        @include sm {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 120%;
+        }
+      }
+      .subtitle-2 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        color: #6ed7dc;
+        max-width: 637px;
+        margin-top: 44px;
+        margin-bottom: 88px;
+        @include sm {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 140%;
+          margin-top: 24px;
+          margin-bottom: 29px;
+        }
+      }
+      @include sm {
+        overflow: hidden;
+      }
+    }
+    .shape {
+      position: absolute;
+      bottom: -267px;
+      right: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .brain {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      z-index: -1;
+      pointer-events: none;
+      mix-blend-mode: color-dodge;
+      @include sm {
+        width: 142px;
+        height: 176px;
+      }
+    }
+    @include lg {
+      margin-left: 100px;
+    }
+
+    @include md {
+      margin-left: 0;
+    }
+  }
+  @include sm {
+    padding: 80px 20px 80px;
+  }
+}

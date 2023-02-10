@@ -1,0 +1,45 @@
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+
+.menu-list {
+  margin-left: 130px;
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .menu-list-item {
+    list-style-type: none;
+    margin: 10px 0;
+    a {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 96px;
+      letter-spacing: -2px;
+      text-transform: capitalize;
+      color: $white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        color: #777777;
+      }
+      @include md {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 120%;
+      }
+    }
+    @include md {
+      text-align: right;
+      padding-right: 16px;
+    }
+  }
+  @include md {
+    margin-left: unset;
+    margin-top: 100px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

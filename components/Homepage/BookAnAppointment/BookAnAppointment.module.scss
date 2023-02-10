@@ -1,0 +1,82 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins.scss";
+
+.book-an-appointment {
+  padding: 100px 40px;
+  margin-left: 170px;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+      border: 1px solid $white;
+      border-radius: 50%;
+      padding: 88px 55px;
+      width: 414px;
+      height: 414px;
+      text-align: center;
+      transition: 0.3s;
+      &:hover {
+        background: $white;
+        .title {
+          color: $black;
+        }
+        .desc {
+          color: $black;
+        }
+      }
+
+      .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: -0.01em;
+
+        @include sm {
+          font-size: 20px;
+          line-height: 140%;
+        }
+      }
+      .desc {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        opacity: 0.5;
+        padding: 19px 0 40px;
+
+        @include sm {
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+      > svg {
+        cursor: pointer;
+        width: 35px;
+        height: 25px;
+      }
+
+      @include sm {
+        width: 307px;
+        height: 307px;
+        padding: 80px 26px;
+      }
+    }
+  }
+
+  @include lg {
+    margin-left: 100px;
+  }
+
+  @include md {
+    margin-left: 0;
+  }
+  @include sm {
+    padding: 100px 20px;
+  }
+}
